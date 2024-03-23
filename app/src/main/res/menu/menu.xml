@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    <item-->
+
+    <!--        android:title="Refine"-->
+    <!--        android:id="@+id/refineFragment"-->
+    <!--        android:icon="@drawable/selective"/>-->
+    <item
+
+        android:id="@+id/exploreFragment"
+        android:icon="@drawable/visibility"
+        android:title="Explore" />
+    <item
+        android:id="@+id/networkFragment"
+        android:icon="@drawable/connection"
+        android:title="Network" />
+    <item
+
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/contactFragment"
+        android:icon="@drawable/contacts"
+        android:title="Contacts" />
+    <item
+        android:id="@+id/groupFragment"
+        android:icon="@drawable/partners"
+        android:title="Groups" />
+
+</menu>

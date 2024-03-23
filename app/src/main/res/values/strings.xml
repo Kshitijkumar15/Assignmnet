@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignmnet</string>
+    <string-array name="options">
+        <item>Available | Hey Let Us Connect</item>
+        <item>Unavailable</item>
+    </string-array>
+</resources>
