@@ -4,7 +4,7 @@
     <item
 
         android:id="@+id/refineFragment"
-        android:icon="@drawable/selective"
+        android:icon="@drawable/filter"
         android:title="Refine"
         app:showAsAction="always" />
 </menu>
