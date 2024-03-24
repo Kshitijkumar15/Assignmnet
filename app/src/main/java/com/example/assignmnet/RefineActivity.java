@@ -5,10 +5,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
-import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class RefineActivity extends AppCompatActivity {
     Spinner sp;
     SeekBar seekBar;
+    Toolbar toolbar2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,8 @@ public class RefineActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+//        toolbar2 = findViewById(R.id.toolbar2);
+//        setSupportActionBar(toolbar2);
         sp=findViewById(R.id.spinner);
         ArrayAdapter adapter= ArrayAdapter.createFromResource(this,R.array.options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.select_dialog_item);

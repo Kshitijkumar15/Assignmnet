@@ -20,16 +20,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
-        ProgressBar progressBar,progressBar2;
+    ProgressBar progressBar, progressBar2;
     TabLayout tb;
     ViewPager vp;
-//    private DrawerLayout drawerLayout;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-//        drawerLayout = findViewById(R.id.drawer_layout);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -51,30 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        setTitle("Explore");
-
-
         progressBar = findViewById(R.id.progressBar2);
         progressBar2 = findViewById(R.id.progressBar1);
         int maxProgress = progressBar.getMax();
         int halfProgress = maxProgress / 2;
         progressBar.setProgress(halfProgress);
         progressBar2.setProgress(halfProgress);
-
-//        SearchView searchView = findViewById(R.id.searchView);
-
-// Set the focus listener to show the hint text without clicking
-//        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View v, boolean hasFocus) {
-//                if (!hasFocus) {
-//                    searchView.setQueryHint(getString(hint));
-//                }
-//            }
-//        });
-
-// Request focus programmatically
-//        searchView.requestFocus();
 
     }
 
