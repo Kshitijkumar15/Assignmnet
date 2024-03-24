@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">#0b2e42</item>
         <item name="android:actionMenuTextColor">@color/textColor</item>
+
     </style>
 
     <style name="Theme.Assignmnet" parent="Base.Theme.Assignmnet" />

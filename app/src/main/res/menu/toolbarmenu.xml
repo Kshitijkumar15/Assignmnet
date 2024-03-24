@@ -6,5 +6,5 @@
         android:id="@+id/refineFragment"
         android:icon="@drawable/filter"
         android:title="Refine"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
 </menu>

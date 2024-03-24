@@ -1,12 +1,16 @@
 package com.example.assignmnet;
 
+import static com.example.assignmnet.R.string.hint;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -52,7 +56,20 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setProgress(halfProgress);
         progressBar2.setProgress(halfProgress);
 
+        SearchView searchView = findViewById(R.id.searchView);
 
+// Set the focus listener to show the hint text without clicking
+        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    searchView.setQueryHint(getString(hint));
+                }
+            }
+        });
+
+// Request focus programmatically
+        searchView.requestFocus();
 
     }
         public boolean onCreateOptionsMenu(Menu menu){
