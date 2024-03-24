@@ -24,36 +24,38 @@
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="200dp"
+        android:layout_width="280dp"
         android:layout_height="30dp"
-        android:layout_marginTop="76dp"
         android:background="@drawable/searchshape"
         android:queryHint="Search"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/tab"
+        app:layout_constraintVertical_bias="0.46">
 
     </SearchView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="-18dp"
         android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab"
+        app:layout_constraintVertical_bias="0.547"
         app:srcCompat="@drawable/filter" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="-280dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="-200dp"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +89,7 @@
                         android:layout_marginStart="220dp"
                         android:layout_marginTop="4dp"
                         android:text="+ INVITE"
-                        android:textColor="#616C6F"
+                        android:textColor="@color/textColor"
                         android:textStyle="bold"></TextView>
                 </LinearLayout>
 
@@ -108,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:text="Michael Murphy"
-                            android:textColor="#192A56"
+                            android:textColor="@color/textColor"
                             android:textStyle="bold">
 
                         </TextView>
@@ -124,16 +126,27 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:text="San Francisco, within 1 Km"
-                            android:textColor="#192A56">
+                            android:textColor="@color/location">
 
                         </TextView>
 
+
                     </LinearLayout>
+
                 </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="5dp"
+                    android:progressDrawable="@drawable/progressbar" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
@@ -148,7 +161,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="4dp"
                             android:text="Friendship | Coffee | Hangout"
-                            android:textColor="#192A56"
+                            android:textColor="@color/textColor"
                             android:textStyle="bold">
 
                         </TextView>
@@ -163,8 +176,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
+                            android:layout_marginTop="4dp"
                             android:text="Hi community! I am open to new connections."
-                            android:textColor="#192A56"
+                            android:textColor="@color/textColor"
                             android:textSize="13dp">
 
                         </TextView>
@@ -178,8 +192,8 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="80dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="200dp"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -212,8 +226,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="220dp"
                         android:layout_marginTop="4dp"
-                        android:text="PENDINGD"
-                        android:textColor="#A4B0BD"
+                        android:text="PENDING"
+                        android:textColor="@color/third"
                         android:textStyle="bold">
 
                     </TextView>
@@ -235,8 +249,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="Jhon Doe"
-                            android:textColor="#192A56"
+                            android:text="John Doe"
+                            android:textColor="@color/textColor"
                             android:textStyle="bold">
 
                         </TextView>
@@ -252,17 +266,27 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:text="San Francisco, within 1 Km"
-                            android:textColor="#192A56">
+                            android:textColor="@color/location">
 
                         </TextView>
 
                     </LinearLayout>
+
                 </LinearLayout>
 
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="5dp"
+                    android:progressDrawable="@drawable/progressbar" />
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -274,16 +298,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:layout_marginTop="4dp"
                             android:text="Coffee | Movies | Hobbies"
-                            android:textColor="#192A56"
+                            android:textColor="@color/textColor"
                             android:textStyle="bold">
 
                         </TextView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -291,9 +314,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="Going to Berkly, would love to share a ride \nwith someone like minded"
-                            android:textColor="#192A56"
-                            android:textSize="13dp"></TextView>
+                            android:text="Going to Berkly, would love to share a ride
+                            \nwith someone like minded"
+                            android:textColor="@color/textColor"
+                            android:textSize="13dp">
+
+                        </TextView>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -314,5 +340,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/toolbarmenu" />
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.986"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864"></androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#143d59"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabTextAppearance="@style/CustomTabTextAppearance"
+        app:tabTextColor="@color/white">
+
+    </com.google.android.material.tabs.TabLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
