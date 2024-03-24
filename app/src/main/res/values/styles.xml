@@ -7,5 +7,11 @@
     <style name="MyMenuItemStyle" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/textColor</item>
     </style>
+    <style name="RoundedSquare">
+        <item name="cornerSize">10%</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
 
 </resources>

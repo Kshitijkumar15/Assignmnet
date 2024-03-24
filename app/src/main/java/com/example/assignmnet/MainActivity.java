@@ -19,15 +19,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
-    ProgressBar progressBar,progressBar2;
+        ProgressBar progressBar,progressBar2;
     TabLayout tb;
     ViewPager vp;
+//    private DrawerLayout drawerLayout;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -35,19 +37,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+//        drawerLayout = findViewById(R.id.drawer_layout);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        tb=findViewById(R.id.tab);
-        vp=findViewById(R.id.viewpager);
-        ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
+        tb = findViewById(R.id.tabLayout);
+        vp = findViewById(R.id.viewPager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         vp.setAdapter(adapter);
         tb.setupWithViewPager(vp);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//        setTitle("Explore");
+
 
         progressBar = findViewById(R.id.progressBar2);
         progressBar2 = findViewById(R.id.progressBar1);
@@ -56,35 +61,37 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setProgress(halfProgress);
         progressBar2.setProgress(halfProgress);
 
-        SearchView searchView = findViewById(R.id.searchView);
+//        SearchView searchView = findViewById(R.id.searchView);
 
 // Set the focus listener to show the hint text without clicking
-        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    searchView.setQueryHint(getString(hint));
-                }
-            }
-        });
+//        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (!hasFocus) {
+//                    searchView.setQueryHint(getString(hint));
+//                }
+//            }
+//        });
 
 // Request focus programmatically
-        searchView.requestFocus();
+//        searchView.requestFocus();
 
     }
-        public boolean onCreateOptionsMenu(Menu menu){
-            MenuInflater inflater=getMenuInflater();
-            inflater.inflate(R.menu.toolbarmenu,menu);
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbarmenu, menu);
+        return true;
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.refineFragment) {
+            Intent intent = new Intent(this, RefineActivity.class);
+            startActivity(intent);
             return true;
-
-        }
-        public boolean onOptionsItemSelected(MenuItem item){
-            if (item.getItemId() == R.id.refineFragment) {
-                Intent intent = new Intent(this, RefineActivity.class);
-                startActivity(intent);
-                return true;
-            } else
-                return super.onOptionsItemSelected(item);
-        }
-
+        } else
+            return super.onOptionsItemSelected(item);
     }
+
+}
