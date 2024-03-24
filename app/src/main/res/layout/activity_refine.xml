@@ -30,6 +30,7 @@
         android:text="Select Your Availabilty"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.096"
@@ -43,6 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Add Your Status"
         android:textSize="20sp"
+        android:textColor="@color/textColor"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +65,7 @@
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/textColor"
         app:layout_constraintVertical_bias="0.551" />
 
     <LinearLayout
@@ -85,6 +88,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
+                android:padding="2dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/buttonshape"
                 android:backgroundTint="#0A3D62"
@@ -262,7 +266,7 @@
         android:textSize="15sp"
         android:gravity="start"
         android:padding="8dp"
-        android:text="Hi community! I am open to new connections "
+        android:text="Hi community! I am open to new connections 😊"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -280,4 +284,29 @@
         app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/textColor"
+        android:text="50"
+        android:backgroundTint="#0A3D62"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

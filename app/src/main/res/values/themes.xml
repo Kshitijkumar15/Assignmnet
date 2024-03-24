@@ -2,8 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Assignmnet" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#0A3D62</item>
+         <item name="colorPrimary">#0b2e42</item>
+        <item name="android:actionMenuTextColor">@color/textColor</item>
     </style>
 
     <style name="Theme.Assignmnet" parent="Base.Theme.Assignmnet" />
+
+
 </resources>

@@ -2,8 +2,10 @@ package com.example.assignmnet;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,5 +30,8 @@ public class RefineActivity extends AppCompatActivity {
         ArrayAdapter adapter= ArrayAdapter.createFromResource(this,R.array.options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.select_dialog_item);
         sp.setAdapter(adapter);
+        seekBar = findViewById(R.id.seekBar);
+        int max = seekBar.getMax();
+        seekBar.setProgress(max / 2);
     }
 }
